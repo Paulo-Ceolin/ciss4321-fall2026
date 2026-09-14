@@ -1,6 +1,8 @@
 from decimal import Decimal, ROUND_DOWN
+from pathlib import Path
 from typing import List, Optional
 
+from tracker.importer import read_expenses_from_csv
 from tracker.models import Expense
 from tracker.storage import StorageInterface
 
@@ -17,6 +19,13 @@ class ExpenseService:
         if payer is None:
             raise ValueError(f"User {expense.paid_by} does not exist.")
         self.storage.save_expense(expense)
+
+    def import_expenses_from_csv(self, filepath: str | Path) -> List[Expense]:
+        """Import validated expenses from CSV and save them to storage."""
+        expenses = read_expenses_from_csv(filepath)
+        for expense in expenses:
+            self.record_expense(expense)
+        return expenses
 
     def split_expense(
         self,
