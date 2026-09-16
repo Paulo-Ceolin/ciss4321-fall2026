@@ -10,7 +10,7 @@ This repository is my public portfolio for CISS4321 coursework in Fall 2026.
 
 | Lab                     | Week | Description                       | PR                    |
 | ----------------------- | ---  | --------------------------------- | --------------------- |
-| lab-01-setup            | 1    | Personal repository built to spec | *(link your PR here)* |
+| lab-01-setup            | 1    | Personal repository built to spec | *(https://github.com/Paulo-Ceolin/ciss4321-fall2026/tree/main)* |
 | lab-02-kata             | 2    | Kata exercises                    | *(link your PR here)* |
 | lab-03-secrets          | 3    | Secrets management                | *(link your PR here)* |
 | lab-04-calibration      | 4    | Calibration                       | *(link your PR here)* |
